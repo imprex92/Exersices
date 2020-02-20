@@ -13,4 +13,9 @@
 .addCartButton{
 	background-color: #6495ed;
 	border-radius: 10px;
+	height: 2em;
+}
+.cartIcon{
+	height: 25px;
+	width: 25px;
 }

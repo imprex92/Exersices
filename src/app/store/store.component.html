@@ -5,10 +5,13 @@
   {{greeting}}
 </h1>
 <div class="storeHeader">
-<h2>Store</h2>
-<span> Number of items in cart: {{ cartSum }} </span>
+	<h2>Store</h2>
+	<span> Number of items in cart: {{ cartSum }} </span>
+	<a class="cartLink">
+		<img src="assets/Cart.svg" alt="Icon to Cart" class="cartIcon">
+	</a>
 </div>
-	<div *ngFor="let item of ProductList">
+	<div *ngFor="let item of productList">
 		<h3>
 			<a [title]="item.name + ' details'">
 				{{ item.name | uppercase }}
@@ -26,6 +29,8 @@
 		<button (click)="addToCart()" type="submit" class="addCartButton">
 			Add to cart
 		</button>
+
+		<span *ngIf="showAddMessage">Den har lagts till!!1!</span>
 	</div>
 
 
