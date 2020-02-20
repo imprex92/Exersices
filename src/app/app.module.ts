@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { StoreComponent } from './store/store.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
    declarations: [
@@ -14,7 +15,9 @@ import { StoreComponent } from './store/store.component';
    imports: [
       BrowserModule,
       FormsModule,
-      CommonModule
+      CommonModule,
+      BrowserAnimationsModule,
+      MatTooltipModule
    ],
    providers: [],
    bootstrap: [
