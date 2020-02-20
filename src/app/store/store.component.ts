@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemListService } from './itemList.service'
 import { ProductList } from './product-list';
+
+
+
 @Component({
   selector: 'app-store',
   templateUrl: './store.component.html',

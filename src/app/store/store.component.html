@@ -10,6 +10,7 @@
 	<a class="cartLink">
 		<img src="assets/Cart.svg" alt="Icon to Cart" class="cartIcon">
 	</a>
+	<div matTooltip="Tooltip!">Hover me</div>
 </div>
 	<div *ngFor="let item of productList">
 		<h3>
@@ -30,7 +31,8 @@
 			Add to cart
 		</button>
 
-		<span *ngIf="showAddMessage">Den har lagts till!!1!</span>
+	<!-- visar på alla. Måste ändra! -->
+		<span *ngIf="showAddMessage">Den har lagts till</span>
 	</div>
 
 
