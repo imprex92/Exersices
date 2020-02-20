@@ -1,20 +1,45 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="section1">
+<h1>{{ title }}</h1>
+<h2>
+	Welcome to the dark side,  <br />
+	{{ writtenInput }}
+</h2>
+
+<form>
+	<input placeholder="Enter Name" (keyup)="onKeyUp($event)">
+</form>
+<button (click)="submitClick()" class="login">{{buttonText}}</button>
+</div>
+
+<div class="onOff">
+	<button (click)="onOffToggle()">{{ buttonToggleBoolean ? 'On' : 'Off' }}</button>
+</div>
+
+<!-- <button (click)="numberChange()">+</button>
+<form action="">
+	<input placeholder="Number" (keyup)="">
+</form>
+<button (click)="numberChange()">-</button> -->
 
 
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
+
+<div class="calendar">
+
+	<p>
+		{{ 'Idag' | uppercase }} är det 
+		{{ today | date:'yyyy-MM-dd' }}
+	</p>
+
+	<div *ngFor="let day of days">
+		<span style="font-weight: bold;">{{ day.day }}</span> <br />
+		{{ day.content }}
+	</div>
+
+</div>
+
+<app-store>
+	
+</app-store>

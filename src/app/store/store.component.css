@@ -1,0 +1,16 @@
+.itemDescriptions{
+	font-weight: bold;
+}
+.dangerLevel{
+	font-style: italic;
+}
+.storeHeader{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #6495ed;
+}
+.addCartButton{
+	background-color: #6495ed;
+	border-radius: 10px;
+}

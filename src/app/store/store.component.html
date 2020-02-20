@@ -1,0 +1,33 @@
+<p>
+  store works!
+</p>
+<h1>
+  {{greeting}}
+</h1>
+<div class="storeHeader">
+<h2>Store</h2>
+<span> Number of items in cart: {{ cartSum }} </span>
+</div>
+	<div *ngFor="let item of ProductList">
+		<h3>
+			<a [title]="item.name + ' details'">
+				{{ item.name | uppercase }}
+			</a>
+		</h3>
+		<p *ngIf="item.danger" class="dangerLevel">
+			Danger level: {{ item.danger }}
+		</p>
+		<p *ngIf="item.description" class="itemDescription">
+			Descriptions: {{ item.description }}
+		</p>
+		<p *ngIf="item.price">
+			Price: ${{ item.price }}
+		</p>
+		<button (click)="addToCart()" type="submit" class="addCartButton">
+			Add to cart
+		</button>
+	</div>
+
+
+
+
