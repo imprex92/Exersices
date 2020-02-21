@@ -10,7 +10,7 @@
 	<a class="cartLink">
 		<img src="assets/Cart.svg" alt="Icon to Cart" class="cartIcon">
 	</a>
-	<div matTooltip="Tooltip!">Hover me</div>
+	<!-- <div matTooltip="Tooltip!">Hover me</div> -->
 </div>
 	<div *ngFor="let item of productList">
 		<h3>
@@ -35,6 +35,12 @@
 		<span *ngIf="showAddMessage">Den har lagts till</span>
 	</div>
 
+	
 
-
-
+	<button mat-raised-button
+        matTooltip="Info about the action"
+        matTooltipClass="example-tooltip-red"
+        aria-label="Button that shows a red tooltip"
+        class="example-button">
+  Red-tooltip Action
+</button>
