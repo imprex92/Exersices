@@ -4,3 +4,33 @@ https://material.angularjs.org/latest/demo/tooltip
 https://codepen.io/pen/?editors=1010
 https://codepen.io/imprex/pen/XWbjQBM?editable=true
 https://api.flutter.dev/flutter/material/Tooltip-class.html
+https://stackblitz.com/angular/jydgypqvqvk
+
+
+
+
+
+
+
+
+
+Exemple:
+
+<button mat-raised-button		(Anropar)
+        matTooltip="Info about the action" (Texten som ska stå i rutan)
+        matTooltipClass="example-tooltip-red" (CSS classen för att tex ändra färg)
+        aria-label="Button that shows a red tooltip"
+        class="example-button"> (tex margin-top: 16px)
+  Red-tooltip Action
+</button>
+
+
+CSS example:
+
+.example-button {
+  margin-top: 16px;
+}
+
+.example-tooltip-red {
+  background: #b71c1c;
+}
