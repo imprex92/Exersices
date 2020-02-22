@@ -27,7 +27,12 @@
 		<p *ngIf="item.price">
 			Price: ${{ item.price }}
 		</p>
-		<button (click)="addToCart()" type="submit" class="addCartButton">
+		<button 
+		(click)="addToCart()" type="submit" class="addCartButton"
+		mat-raised-button
+        matTooltip="Info about the action"
+        matTooltipClass="example-tooltip-red"
+        aria-label="Button that shows a red tooltip">
 			Add to cart
 		</button>
 
