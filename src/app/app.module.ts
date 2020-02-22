@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 import { ToolTipSettings } from 'src/app/toolTipSettings'
+
+
 export const myCustomTooltipDefaults: ToolTipSettings = {
-  	showDelay: 1000,
+  	showDelay: 500,
   	hideDelay: 500,
-  	touchendHideDelay: 1000,
+  	touchendHideDelay: 750,
   	position: 'right',
 };
 
