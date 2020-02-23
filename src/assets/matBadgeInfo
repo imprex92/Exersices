@@ -1,0 +1,18 @@
+	https://hoshcoding.com/courses/1/angular-material-badges
+	
+	mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="accent"
+
+
+
+	  exemple:
+
+	  	<button mat-raised-button color="primary"
+      	matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    		Action
+  		</button>
+
+
+		<span matBadge="0" matBadgeOverlap="false">
+			Text with a badge
+		</span>
