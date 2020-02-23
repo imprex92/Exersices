@@ -1,0 +1,12 @@
+Import the module!: import {MatSnackBarModule} from '@angular/material/snack-bar'
+Create this awesome constructor you don't understand: 
+	constructor(public snackBar: MatSnackBar) {}
+
+Call the function:
+	openSnackBar(message: string, action: string) {
+		this.snackBar.open(message, action, {
+		duration: 2000,
+		});
+	} 
+
+<button (click)="openSnackBar('Party', 'act')">Show snack-bar</button> 
