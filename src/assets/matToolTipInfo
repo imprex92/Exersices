@@ -7,19 +7,12 @@ https://api.flutter.dev/flutter/material/Tooltip-class.html
 https://stackblitz.com/angular/jydgypqvqvk
 
 
-
-
-
-
-
-
-
 Exemple:
 
 <button mat-raised-button		(Anropar)
         matTooltip="Info about the action" (Texten som ska stå i rutan)
         matTooltipClass="example-tooltip-red" (CSS classen för att tex ändra färg)
-        aria-label="Button that shows a red tooltip"
+        aria-label="Button that shows a red tooltip" (text för screenreader)
         class="example-button"> (tex margin-top: 16px)
   Red-tooltip Action
 </button>
