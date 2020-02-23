@@ -7,9 +7,20 @@
 <div class="storeHeader">
 	<h2>Store</h2>
 	<span> Number of items in cart: {{ cartSum }} </span>
-	<a class="cartLink">
-		<img src="assets/Cart.svg" alt="Icon to Cart" class="cartIcon">
+
+
+	<a class="cartLink"
+	mat-raised-button
+	matTooltip="Your cart!"
+	matTooltipClass="Cart-tooltip"
+	aria-label="Button to cart">
+	
+		<span matBadge= {{cartSum}} matBadgeOverlap="false">
+			<img src="assets/Cart.svg" alt="Icon to Cart" class="cartIcon">
+		</span>
+
 	</a>
+	
 	<!-- <div matTooltip="Tooltip!">Hover me</div> -->
 </div>
 	<div *ngFor="let item of productList">
@@ -28,24 +39,20 @@
 			Price: ${{ item.price }}
 		</p>
 		<button 
-		(click)="addToCart()" type="submit" class="addCartButton"
+		(click)="addToCart()" 
+		(click)="openSnackBar('Product added to cart!', 'act')"
+		type="submit" class="addCartButton"
 		mat-raised-button
-        matTooltip="Info about the action"
-        matTooltipClass="example-tooltip-red"
-        aria-label="Button that shows a red tooltip">
+        matTooltip="Add product to cart!"
+        matTooltipClass="addCart-tooltip"
+        aria-label="Button that adds item to cart">
 			Add to cart
 		</button>
 
-	<!-- visar på alla. Måste ändra! -->
-		<span *ngIf="showAddMessage">Den har lagts till</span>
+		<!-- visar på alla. Måste ändra! -->
+		<!-- <span *ngIf="showAddMessage">Den har lagts till</span> -->
 	</div>
 
 	
 
-	<button mat-raised-button
-        matTooltip="Info about the action"
-        matTooltipClass="example-tooltip-red"
-        aria-label="Button that shows a red tooltip"
-        class="example-button">
-  Red-tooltip Action
-</button>
+	<button (click)="openSnackBar('Party', 'act')">Show snack-bar</button> 

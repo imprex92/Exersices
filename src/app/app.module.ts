@@ -1,3 +1,4 @@
+						// Import //
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -5,11 +6,12 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { StoreComponent } from './store/store.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
+import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions } from '@angular/material/tooltip';
 import { ToolTipSettings } from 'src/app/toolTipSettings'
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 
-
+						// Export //
 export const myCustomTooltipDefaults: ToolTipSettings = {
   	showDelay: 500,
   	hideDelay: 500,
@@ -27,8 +29,16 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 		FormsModule,
 		CommonModule,
 		BrowserAnimationsModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatBadgeModule,
+		MatSnackBarModule
    ],
+//    TITTA HÄR EXPORTS
+   	exports: [
+		   	MatTooltipModule,
+			MatBadgeModule,
+			MatSnackBarModule
+	],
 	providers: [
 		{
 			provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults

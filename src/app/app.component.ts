@@ -1,12 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Day } from './day';
+import { MatSnackBar } from "@angular/material/snack-bar"; // TITTA HÄR
+
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit {
+
+	// TITTA HÄR
+		constructor(public snackBar: MatSnackBar) {}
+		
+	// TITTA HÄR
+
 	title1 = 'calendar';
 	today = Date.now();
 	days: Day[] = [
@@ -69,5 +78,9 @@ export class AppComponent implements OnInit {
 
 	}
 
-	
+	openSnackBar(message: string, action: string) {
+		this.snackBar.open(message, action, {
+		   duration: 2000,
+		});
+	 } 
 }
