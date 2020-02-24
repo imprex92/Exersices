@@ -1,19 +1,32 @@
-<div class="section1">
-<h1>{{ title }}</h1>
-<h2>
-	Welcome to the dark side,  <br />
-	{{ writtenInput }}
-</h2>
 
-<form>
-	<input placeholder="Enter Name" (keyup)="onKeyUp($event)">
-</form>
-<button (click)="submitClick()" class="login">{{buttonText}}</button>
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/login">Login</a>
+		<a class="nav-item nav-link" routerLink="/register">Register</a>
+		<a class="nav-item nav-link" routerLink="/store">Store</a>
+    </div>
+</nav>
+
+<!-- main content container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="onOff">
-	<button (click)="onOffToggle()">{{ buttonToggleBoolean ? 'On' : 'Off' }}</button>
-</div>
+
+
+
+
+
+
+
 
 <!-- <button (click)="numberChange()">+</button>
 <form action="">
@@ -26,22 +39,4 @@
 
 
 
-<div class="calendar">
 
-	<p>
-		{{ 'Idag' | uppercase }} är det 
-		{{ today | date:'yyyy-MM-dd' }}
-	</p>
-
-	<div *ngFor="let day of days">
-		<span style="font-weight: bold;">{{ day.day }}</span> <br />
-		{{ day.content }}
-	</div>
-
-</div>
-
-<app-store>
-	
-</app-store>
-<!-- <button (click)="openSnackBar('Party', 'act')">Show snack-bar</button>  -->
-<!-- TITTA HÄR -->
