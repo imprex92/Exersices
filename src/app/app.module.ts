@@ -20,11 +20,11 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 };
 
 @NgModule({
-   	declarations: [
+		declarations: [
 		AppComponent,
 		StoreComponent
-   ],
-   imports: [
+	],
+	imports: [
 		BrowserModule,
 		FormsModule,
 		CommonModule,
@@ -32,10 +32,10 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 		MatTooltipModule,
 		MatBadgeModule,
 		MatSnackBarModule
-   ],
+	],
 
-   	exports: [
-		   	MatTooltipModule,
+		exports: [
+				MatTooltipModule,
 			MatBadgeModule,
 			MatSnackBarModule
 	],
