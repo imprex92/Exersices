@@ -1,4 +1,4 @@
-						// Import //
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +11,7 @@ import { ToolTipSettings } from 'src/app/toolTipSettings'
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar'
 
-						// Export //
+
 export const myCustomTooltipDefaults: ToolTipSettings = {
   	showDelay: 500,
   	hideDelay: 500,
@@ -33,7 +33,7 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 		MatBadgeModule,
 		MatSnackBarModule
    ],
-//    TITTA HÄR EXPORTS
+
    	exports: [
 		   	MatTooltipModule,
 			MatBadgeModule,
