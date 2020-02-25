@@ -8,13 +8,15 @@ import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions
 import { ToolTipSettings } from 'src/app/toolTipSettings';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { appRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { StoreComponent } from './store/store.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { appRoutingModule } from './app.routing';
+import { CitiesComponent } from './cities/cities.component';
+import { HeaderComponent } from './cities/header/header.component';
 
 export const myCustomTooltipDefaults: ToolTipSettings = {
   	showDelay: 500,
@@ -24,35 +26,44 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 };
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      StoreComponent,
-      HomeComponent,
-      LoginComponent,
-      RegisterComponent
-   ],
-   imports: [
-      BrowserModule,
-      FormsModule,
-      CommonModule,
-      BrowserAnimationsModule,
-      MatTooltipModule,
-      MatBadgeModule,
-	  MatSnackBarModule,
-	  appRoutingModule
-   ],
-   exports: [
-      MatTooltipModule,
-      MatBadgeModule,
-      MatSnackBarModule
-   ],
-   providers: [
-	{
-		provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults
-	}
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+	declarations: [
+		AppComponent,
+		StoreComponent,
+		HomeComponent,
+		LoginComponent,
+		RegisterComponent,
+		CitiesComponent,
+		HeaderComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		CommonModule,
+		BrowserAnimationsModule,
+		MatTooltipModule,
+		MatBadgeModule,
+		MatSnackBarModule,
+		appRoutingModule
+	],
+	exports: [
+		MatTooltipModule,
+		MatBadgeModule,
+		MatSnackBarModule
+	],
+	providers: [
+		{
+			provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults
+		}
+	],
+	bootstrap: [
+		AppComponent
+	],
+	
 })
 export class AppModule { }
+
+
+
+// {
+//		provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults
+//	}

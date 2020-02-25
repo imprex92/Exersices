@@ -1,0 +1,13 @@
+<h1>Cities Page</h1>
+
+
+<app-header></app-header>
+
+<app-smartCityList [data]="data">
+	
+</app-smartCityList>
+
+<app-addcityform (onSaveCity)="addNewCity($event)"></app-addcityform>
+
+
+<!-- <app-citylistitem *ngFor="let city of data" [cityName]="'city'"></app-citylistitem> -->
