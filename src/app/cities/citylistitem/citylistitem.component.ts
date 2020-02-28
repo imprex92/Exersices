@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Cities } from '../smartCityList/cities'
 @Component({
 	selector: 'app-citylistitem',
 	templateUrl: './citylistitem.component.html',
@@ -7,8 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CitylistitemComponent implements OnInit {
 
-	@Input() cityName: string = '???'
-
+	@Input() city: Cities = { name: '???' };
+	@Output() deleteCity = new EventEmitter<string>();
+	onDeleteCtiy(){
+		this.deleteCity.emit(this.city.name);
+	}
 	constructor() { }
 
 	ngOnInit() {

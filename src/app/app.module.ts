@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CitiesComponent } from './cities/cities.component';
 import { HeaderComponent } from './cities/header/header.component';
+import { AddcityformComponent } from './cities/addcityform/addcityform.component';
 
 export const myCustomTooltipDefaults: ToolTipSettings = {
   	showDelay: 500,
@@ -33,7 +34,8 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 		LoginComponent,
 		RegisterComponent,
 		CitiesComponent,
-		HeaderComponent
+		HeaderComponent,
+		AddcityformComponent
 	],
 	imports: [
 		BrowserModule,
@@ -43,12 +45,14 @@ export const myCustomTooltipDefaults: ToolTipSettings = {
 		MatTooltipModule,
 		MatBadgeModule,
 		MatSnackBarModule,
-		appRoutingModule
+		appRoutingModule,
+		
 	],
 	exports: [
 		MatTooltipModule,
 		MatBadgeModule,
-		MatSnackBarModule
+		MatSnackBarModule,
+		
 	],
 	providers: [
 		{

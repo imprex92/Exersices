@@ -6,8 +6,10 @@
 	justify-content: space-evenly;
 	border-bottom: 2px solid black;
 	background-color: #6495ed;
+	
+	
 }
 .navbar-nav > a{
 	text-decoration: none;
-	color: black;
+	margin: 1em;
 }

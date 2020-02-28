@@ -1,24 +1,24 @@
 
 <!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" routerLink="/login">Login</a>
-		<a class="nav-item nav-link" routerLink="/register">Register</a>
-        <a class="nav-item nav-link" routerLink="/store">Store</a>
-        <a class="nav-item nav-link" routerLink="/cities">Cities</a>
-    </div>
+	<div class="navbar-nav">
+		<a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+		<a class="nav-item nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+		<a class="nav-item nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+		<a class="nav-item nav-link" routerLink="/store" routerLinkActive="active">Store</a>
+		<a class="nav-item nav-link" routerLink="/cities" routerLinkActive="active">Cities</a>
+	</div>
 </nav>
 
 <!-- main content container -->
 <div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 offset-sm-2">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 offset-sm-2">
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+	</div>
 </div>
 
 

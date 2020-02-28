@@ -1,17 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Cities } from './cities';
+
 
 @Component({
-  selector: 'app-smartCityList',
-  templateUrl: './smartCityList.component.html',
-  styleUrls: ['./smartCityList.component.css']
+	selector: 'app-smartCityList',
+	templateUrl: './smartCityList.component.html',
+	styleUrls: ['./smartCityList.component.css']
 })
 export class SmartCityListComponent implements OnInit {
-  
-  @Input() data = [];
+	
+	@Input() data: Cities[] = [];
+	@Output() deleteCity = new EventEmitter<string>();
+	constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	handleDelete(cityName: string){
+		this.deleteCity.emit(cityName);
+	}
+	ngOnInit() {
+	}
 
 }

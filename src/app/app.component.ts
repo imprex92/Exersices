@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { MatSnackBar } from "@angular/material/snack-bar"; // TITTA HÄR
 
-
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -10,7 +9,7 @@ import { MatSnackBar } from "@angular/material/snack-bar"; // TITTA HÄR
 })
 
 export class AppComponent implements OnInit {
-
+title = 'Exersices'
 	// TITTA HÄR
 		constructor(public snackBar: MatSnackBar) {}
 		
