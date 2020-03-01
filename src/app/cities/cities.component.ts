@@ -1,7 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Cities } from './smartCityList/cities';
 import {CitiesService} from './cities.service';
-
 @Component({
 	selector: 'app-cities',
 	templateUrl: './cities.component.html',

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Cities } from './cities';
-
+import {CitiesService} from '../cities.service';
 
 @Component({
 	selector: 'app-smartCityList',
@@ -11,7 +11,7 @@ export class SmartCityListComponent implements OnInit {
 	
 	@Input() data: Cities[] = [];
 	@Output() deleteCity = new EventEmitter<string>();
-	constructor() { }
+	constructor(public citiesService: CitiesService) { }
 
 	handleDelete(cityName: string){
 		this.deleteCity.emit(cityName);

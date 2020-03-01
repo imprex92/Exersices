@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Cities } from '../smartCityList/cities'
+
+
 @Component({
 	selector: 'app-citylistitem',
 	templateUrl: './citylistitem.component.html',
@@ -9,7 +11,7 @@ export class CitylistitemComponent implements OnInit {
 
 	@Input() city: Cities = { name: '???' };
 	@Output() deleteCity = new EventEmitter<string>();
-	onDeleteCtiy(){
+	onDeleteCity(){
 		this.deleteCity.emit(this.city.name);
 	}
 	constructor() { }

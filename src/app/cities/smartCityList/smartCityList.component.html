@@ -3,10 +3,10 @@
 </p>
 
 <div class="list">
-	<app-city-list-item
+	<app-citylistitem
 		*ngFor="let city of data"
 		[cityName]="city"
-		(deleteCity)="handleDelete($event)"></app-city-list-item>
+		(deleteCity)="handleDelete($event)"></app-citylistitem>
 	
 	<!-- <div>Göteborg <button>Delete</button> </div>
 	<div>Helsingborg <button>Delete</button> </div>
