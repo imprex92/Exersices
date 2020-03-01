@@ -5,7 +5,7 @@
 <div class="list">
 	<app-citylistitem
 		*ngFor="let city of data"
-		[cityName]="city"
+		[city]="city"
 		(deleteCity)="handleDelete($event)"></app-citylistitem>
 	
 	<!-- <div>Göteborg <button>Delete</button> </div>
